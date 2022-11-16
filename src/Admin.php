@@ -34,6 +34,9 @@ class Admin extends \WP_REST_Controller {
 		// Custom columns.
 		add_filter( 'manage_bannerbear_url_posts_columns', array( $this, 'manage_posts_columns' ) );
 		add_action( 'manage_bannerbear_url_posts_custom_column', array( $this, 'manage_posts_custom_column' ), 10, 2 );
+
+		// Link to the settings page on the plugins page.
+		add_filter( 'plugin_action_links_' . plugin_basename( BANNERBEAR_PLUGIN_FILE ), array( $this, 'plugin_action_links' ) );
 	}
 
 	/**
@@ -282,5 +285,19 @@ class Admin extends \WP_REST_Controller {
 	 */
 	public function display_post_type_mb( $post, $metabox ) {
 		include plugin_dir_path( __FILE__ ) . 'views/post-type.php';
+	}
+
+	/**
+	 * Plugins action links.
+	 *
+	 * @since 1.0.0
+	 * @param array $links
+	 * @return array
+	 */
+	public function plugin_action_links( $links ) {
+
+		$links[] = '<a href="' . esc_url( admin_url( 'edit.php?post_type=bannerbear_url' ) ) . '">' . esc_html__( 'View URLs', 'bannerbear' ) . '</a>';
+		$links[] = '<a href="https://www.bannerbear.com/support/">' . esc_html__( 'Get Help', 'bannerbear' ) . '</a>';
+		return $links;
 	}
 }
