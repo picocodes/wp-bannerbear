@@ -8,19 +8,30 @@ Version: 1.0.0
 Stable tag: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Donate link: https://bannerbear.com/?utm_source=wp-repo&utm_medium=donate&utm_campaign=readme
 
-Easily add dynamically generated images to posts and pages, or generate custom Open Graph images automatically.
+Add dynamically generated open graph images or pinterest pins to posts and pages automatically.
 
 == Description ==
 
-A WordPress plugin to add the Bannerbear Signed URL functionality to WordPress sites easily. It can be used to add dynamically generated images to posts and pages, or generate custom Open Graph images automatically.
+A WordPress plugin that adds Bannerbear Signed URL functionality to WordPress sites.
 
-= Documentation =
+### What is Bannerbear?
 
-Find the full Signed URL documentation [here](https://github.com/yongfook/bannerbear-signed-url-examples#on-demand-signed-urls).
+[Bannerbear](https://www.bannerbear.com/) is a SaaS service that auto-generates images, based on dynamic parameters that you send, and templates you have set up on the Bannerbear back end.
 
-= Usage =
+### What does this plugin do?
+
+This plugin provides an easy interface to add Bannerbear Signed URL images to your WP theme.
+
+Bannerbear Signed URLs are dynamic urls that *generate images on the fly* based on templates. This plugin helps you map WP variables (title, date etc) to templates, and then inserts those URLs into WP posts and pages. 
+
+One use case for this is auto-generating Open Graph images.
+
+### Who is this plugin for?
+
+This plugin requires a Bannerbear Scale or Enterprise account and is best suited for agencies managing WordPress sites for multiple clients, or individual users with large WordPress sites.
+
+== Usage ==
 
 **Pre-requisite**: Create a Bannerbear project and add a template (or duplicate this [sample template](https://app.bannerbear.com/p/B2zYp0bOvEKD9J5mVZ)) to your project.
 
@@ -29,11 +40,9 @@ Find the full Signed URL documentation [here](https://github.com/yongfook/banner
 - Select a template from your list of templates.
 - This will automatically create and grab a [Signed URL Base](https://www.bannerbear.com/help/articles/179-generate-images-using-signed-urls/) from the template, and all available template modifications will be listed.
 
-= Configuration =
-
 Each API modifiable layer will have a dropdown menu that can be mapped with fields from the WordPress site. Select layers that you want to modify and choose where you want to apply the template/Signed URL.
 
-You can then embed it as a shortcode/snippet or add as a Block on WordPress pages.  
+You can then embed it as a shortcode/snippet or add as a Block on WordPress pages. 
 
 == Installation ==
 
@@ -43,15 +52,16 @@ You can then embed it as a shortcode/snippet or add as a Block on WordPress page
 * Find the plugin and click on the Install Now button
 * After installation, click on Activate Plugin link to activate the plugin.
 
+
 == Frequently Asked Questions ==
 
 = What is required to use this plugin? =
 
-* You will need to create an account on [our website](https://www.bannerbear.com/) in order to get an API Key.
+You will need to create an account on [our website](https://www.bannerbear.com/) in order to get an API Key.
 
 = Where can I get support? =
 
-* Use the [contact form on our website](https://www.bannerbear.com/support/).
+Use the [contact form on our website](https://www.bannerbear.com/support/).
 
 == Screenshots ==
 
